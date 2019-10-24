@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*General Layout*/
+*{
+	padding: 0;
+	margin: 0;
+	font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif';
+	color: #0059B3;
+	background-color: #FFFFFF;
+}
+
+#wrapper{
+	margin: auto;
+}
+
+img.logo{
+	margin-left: 100px;
+	margin-top: 0px;
+}
+
+nav{
+	max-height: 120px;
+	background-color: #0059B3;
+}
+
+nav ul{
+	display: table-row;
+	text-align: center;
+	color: white;
+	float: right;
+	margin-right: 100px;
+	margin-top: 52px;
+}
+
+nav li{
+	display: table-cell;
+	color: white;
+	font-size: 22px;
+	font-weight: 100;
+}
+
+nav a{
+	color: white;
+	text-decoration: none;
+	padding: 1em;
+	background-color: #0059B3;
+}
+
+nav a:link{
+	text-decoration: none;
+	color: white;
+}
+
+nav a:hover{
+	text-decoration: underline;
+	color: white;
+}
+
+nav a:active{
+	color: white;
+	text-decoration: none;
+}
+
+
