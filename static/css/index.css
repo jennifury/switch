@@ -16,7 +16,6 @@
 
 img.logo{
 	margin-left: 100px;
-	margin-top: 0px;
 }
 
 nav{
@@ -58,6 +57,126 @@ nav a:hover{
 }
 
 nav a:active{
+	color: white;
+	text-decoration: none;
+}
+
+/*three columns*/
+.column{
+	background-color: #E6E6E6;
+	float:left;
+	width: 27.33%;
+	padding:15px;
+	margin: 10px;
+}
+
+.row:after{
+	content:"";
+	display:table;
+	clear: both;
+}
+
+/*heading*/
+.centerHeading{
+	align-content: space-around;
+	background-color:#E6E6E6;
+	padding: 7px;
+}
+
+#Engineering{
+	height: 100%;
+	width: 100%;
+	margin: none;
+	padding: none;
+	border: none;
+}
+
+#Engineering td{
+	vertical-align: auto;
+	text-align: center;
+
+}
+
+#Public{
+	height: 100%;
+	width: 100%;
+	margin: none;
+	padding: none;
+	border: none;
+}
+
+#Public td{
+	vertical-align: auto;
+	text-align: center;
+
+}
+
+#Data{
+	height: 100%;
+	width: 100%;
+	margin: none;
+	padding: none;
+	border: none;
+}
+
+#Data td{
+	vertical-align: auto;
+	text-align: center;
+
+}
+
+/* Break */
+.break{
+	margin-top: 20px;
+}
+
+/* Footer */
+footer{
+	min-height: 80px;
+	margin: auto;
+	background-color: #0059B3;
+	padding: 27px 0px 0px 100px;
+}
+
+footer p{
+	color: white;
+	background-color: #0059B3;
+	font-size: 22px;
+	font-weight: 100;
+	margin-left: 870px;
+}
+
+footer ul{
+	display: table-row;
+	text-align: center;
+	color: white;
+	float: left;
+}
+
+footer li{
+	display: table-cell;
+	color: white;
+	font-size: 22px;
+	font-weight: 100;
+}
+
+footer a{
+	background-color: #0059B3;
+	color: white;
+	padding-right: 1em;
+}
+
+footer a:link{
+	text-decoration: none;
+	color: white;
+}
+
+footer a:hover{
+	text-decoration: underline;
+	color: white;
+}
+
+footer a:active{
 	color: white;
 	text-decoration: none;
 }
