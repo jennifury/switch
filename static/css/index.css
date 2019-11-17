@@ -15,7 +15,7 @@
 }
 
 img.logo{
-	margin-left: 100px;
+	margin-left: 5%;
 }
 
 nav{
@@ -28,8 +28,9 @@ nav ul{
 	text-align: center;
 	color: white;
 	float: right;
-	margin-right: 100px;
+	padding-right: 5%;
 	margin-top: 52px;
+	background-color: #0059B3;
 }
 
 nav li{
@@ -37,6 +38,7 @@ nav li{
 	color: white;
 	font-size: 22px;
 	font-weight: 100;
+		background-color: #0059B3;
 }
 
 nav a{
@@ -61,17 +63,200 @@ nav a:active{
 	text-decoration: none;
 }
 
-/* Break */
+/* Break for Homepage*/
 .break{
 	margin-top: 20px;
+}
+
+/*Sell Page*/
+#header{
+	font-size:70px;
+	color:#E7E24C;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+/*three columns*/
+.column{
+	background-color: #E6E6E6;
+	float: left;
+	width: 28.5%;
+	padding:15px;
+}
+
+.row{
+	margin-bottom: 20px;
+}
+
+#center{
+	margin: auto 2% auto 2%;
+}
+
+.row:after{
+	content:"";
+	display:table;
+	clear: both;
+}
+
+/*heading*/
+.centerHeading{
+	align-content: space-around;
+	background-color:#E6E6E6;
+	padding: 7px;
+}
+
+#Engineering{
+	height: 100%;
+	width: 100%;
+	margin: none;
+	padding: none;
+	border: none;
+}
+
+#Engineering td{
+	vertical-align: auto;
+	text-align: center;
+
+}
+
+#Public{
+	height: 100%;
+	width: 100%;
+	margin: none;
+	padding: none;
+	border: none;
+}
+
+#Public td{
+	vertical-align: auto;
+	text-align: center;
+
+}
+
+#Data{
+	height: 100%;
+	width: 100%;
+	margin: none;
+	padding: none;
+	border: none;
+}
+
+#Data td{
+	vertical-align: auto;
+	text-align: center;
+
+}
+
+/*About Us Page*/
+#aboutus{
+	background-color: #E6E6E6;
+	padding: 15px;
+	min-height: 610px;
+	margin-left: 5%;
+	margin-bottom: 10px;
+	width: 60%;
+	float: left;
+}
+
+#theteam{
+	background-color: #E6E6E6;
+	padding: 15px;
+	min-height: 610px;
+	margin-right: 5%;
+	margin-bottom: 10px;
+	width: 28%;
+	float: right;
+}
+
+p.theteam{
+	background-color: #E6E6E6;
+}
+
+.aboutusdesc{
+	background-color: #E6E6E6;
+}
+
+/*Contact Us Page*/
+main{
+	min-height: 730px;
+}
+
+#businessinfo{
+	background-color: #E6E6E6;
+	padding: 15px;
+	min-height: 610px;
+	margin-left: 5%;
+	margin-bottom: 10px;
+	width: 28%;
+	float: left;
+}
+
+#sayhello{
+	background-color: #E6E6E6;
+	padding: 15px;
+	min-height: 610px;
+	margin-right: 5%;
+	margin-bottom: 10px;
+	width: 60%;
+	float: right;
+}
+
+h1.h1{
+	background-color: #E6E6E6;
+	font-size: 37px;
+}
+
+h2.heading{
+	background-color: #E6E6E6;
+}
+
+li.question{
+	list-style:none;
+	padding-top:20px;
+	background-color: #E6E6E6;
+}
+
+li.input{
+	list-style:none;
+	background-color: #E6E6E6;
+}
+
+p.sub{
+	background-color: #E6E6E6;
+	padding-bottom:20px;
+}
+
+label{
+	background-color: #E6E6E6;
+}
+
+input{
+	border: 1px solid #0059B3;
+	padding: 5px;
+}
+
+input.submit{
+	margin-top: 20px;
+	padding: 10px;
+	font-size: 15px;
+}
+
+li.textarea{
+	background-color: #0059B3;
+}
+
+textarea{
+	border: 1px solid #0059B3;
+	padding: 5px;
+	resize:none;
 }
 
 /* Footer */
 footer{
 	min-height: 80px;
-	margin: auto;
 	background-color: #0059B3;
-	padding: 27px 0px 0px 100px;
+	padding-left: 5%;
+	padding-top: 25px;
 }
 
 footer p{
@@ -79,7 +264,8 @@ footer p{
 	background-color: #0059B3;
 	font-size: 22px;
 	font-weight: 100;
-	margin-left: 870px;
+	float: right;
+	padding-right: 5%;
 }
 
 footer ul{
@@ -87,6 +273,7 @@ footer ul{
 	text-align: center;
 	color: white;
 	float: left;
+	background-color: #0059B3;
 }
 
 footer li{
@@ -94,6 +281,7 @@ footer li{
 	color: white;
 	font-size: 22px;
 	font-weight: 100;
+	background-color: #0059B3;
 }
 
 footer a{
@@ -193,5 +381,3 @@ footer a:active{
   from {opacity: 0.5}
   to {opacity: 1}
 }
-
-
