@@ -204,6 +204,8 @@ main{
 h1.h1{
 	background-color: #E6E6E6;
 	font-size: 37px;
+	padding-bottom: 2px;
+	border-bottom: 3px solid #0059B3;
 }
 
 h2.heading{
