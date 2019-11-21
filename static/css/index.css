@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @charset "utf-8";
 /* CSS Document */
 
@@ -383,3 +384,390 @@ footer a:active{
   from {opacity: 0.5}
   to {opacity: 1}
 }
+=======
+@charset "utf-8";
+/* CSS Document */
+
+/*General Layout*/
+*{
+	padding: 0;
+	margin: 0;
+	font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif';
+	color: #0059B3;
+	background-color: #FFFFFF;
+}
+
+#wrapper{
+	margin: auto;
+}
+
+img.logo{
+	margin-left: 5%;
+}
+
+nav{
+	max-height: 120px;
+	background-color: #0059B3;
+}
+
+nav ul{
+	display: table-row;
+	text-align: center;
+	color: white;
+	float: right;
+	padding-right: 5%;
+	margin-top: 52px;
+	background-color: #0059B3;
+}
+
+nav li{
+	display: table-cell;
+	color: white;
+	font-size: 22px;
+	font-weight: 100;
+		background-color: #0059B3;
+}
+
+nav a{
+	color: white;
+	text-decoration: none;
+	padding: 1em;
+	background-color: #0059B3;
+}
+
+nav a:link{
+	text-decoration: none;
+	color: white;
+}
+
+nav a:hover{
+	text-decoration: underline;
+	color: white;
+}
+
+nav a:active{
+	color: white;
+	text-decoration: none;
+}
+
+/* Break for Homepage*/
+.break{
+	margin-top: 20px;
+}
+
+/*Sell Page*/
+#header{
+	font-size:70px;
+	color:#E7E24C;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+/*three columns*/
+.column{
+	background-color: #E6E6E6;
+	float: left;
+	width: 28.5%;
+	padding:15px;
+}
+
+.row{
+	margin-bottom: 20px;
+}
+
+#center{
+	margin: auto 2% auto 2%;
+}
+
+.row:after{
+	content:"";
+	display:table;
+	clear: both;
+}
+
+/*heading*/
+.centerHeading{
+	align-content: space-around;
+	background-color:#E6E6E6;
+	padding: 7px;
+}
+
+#Engineering{
+	height: 100%;
+	width: 100%;
+	margin: none;
+	padding: none;
+	border: none;
+}
+
+#Engineering td{
+	vertical-align: auto;
+	text-align: center;
+
+}
+
+#Public{
+	height: 100%;
+	width: 100%;
+	margin: none;
+	padding: none;
+	border: none;
+}
+
+#Public td{
+	vertical-align: auto;
+	text-align: center;
+
+}
+
+#Data{
+	height: 100%;
+	width: 100%;
+	margin: none;
+	padding: none;
+	border: none;
+}
+
+#Data td{
+	vertical-align: auto;
+	text-align: center;
+
+}
+
+/*About Us Page*/
+#aboutus{
+	background-color: #E6E6E6;
+	padding: 15px;
+	min-height: 610px;
+	margin-left: 5%;
+	margin-bottom: 10px;
+	width: 60%;
+	float: left;
+}
+
+#theteam{
+	background-color: #E6E6E6;
+	padding: 15px;
+	min-height: 610px;
+	margin-right: 5%;
+	margin-bottom: 10px;
+	width: 28%;
+	float: right;
+}
+
+p.theteam{
+	background-color: #E6E6E6;
+}
+
+.aboutusdesc{
+	background-color: #E6E6E6;
+}
+
+/*Contact Us Page*/
+main{
+	min-height: 730px;
+}
+
+#businessinfo{
+	background-color: #E6E6E6;
+	padding: 15px;
+	min-height: 610px;
+	margin-left: 5%;
+	margin-bottom: 10px;
+	width: 28%;
+	float: left;
+}
+
+#sayhello{
+	background-color: #E6E6E6;
+	padding: 15px;
+	min-height: 610px;
+	margin-right: 5%;
+	margin-bottom: 10px;
+	width: 60%;
+	float: right;
+}
+
+h1.h1{
+	background-color: #E6E6E6;
+	font-size: 37px;
+	padding-bottom: 2px;
+	border-bottom: 3px solid #0059B3;
+}
+
+h2.heading{
+	background-color: #E6E6E6;
+}
+
+li.question{
+	list-style:none;
+	padding-top:20px;
+	background-color: #E6E6E6;
+}
+
+li.input{
+	list-style:none;
+	background-color: #E6E6E6;
+}
+
+p.sub{
+	background-color: #E6E6E6;
+	padding-bottom:20px;
+}
+
+label{
+	background-color: #E6E6E6;
+}
+
+input{
+	border: 1px solid #0059B3;
+	padding: 5px;
+}
+
+input.submit{
+	margin-top: 20px;
+	padding: 10px;
+	font-size: 15px;
+}
+
+li.textarea{
+	background-color: #0059B3;
+}
+
+textarea{
+	border: 1px solid #0059B3;
+	padding: 5px;
+	resize:none;
+}
+
+/* Footer */
+footer{
+	min-height: 80px;
+	background-color: #0059B3;
+	padding-left: 5%;
+	padding-top: 25px;
+}
+
+footer p{
+	color: white;
+	background-color: #0059B3;
+	font-size: 22px;
+	font-weight: 100;
+	float: right;
+	padding-right: 5%;
+}
+
+footer ul{
+	display: table-row;
+	text-align: center;
+	color: white;
+	float: left;
+	background-color: #0059B3;
+}
+
+footer li{
+	display: table-cell;
+	color: white;
+	font-size: 22px;
+	font-weight: 100;
+	background-color: #0059B3;
+}
+
+footer a{
+	background-color: #0059B3;
+	color: white;
+	padding-right: 1em;
+}
+
+footer a:link{
+	text-decoration: none;
+	color: white;
+}
+
+footer a:hover{
+	text-decoration: underline;
+	color: white;
+}
+
+footer a:active{
+	color: white;
+	text-decoration: none;
+}
+
+/* Slideshow Layout */
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 1100px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #717171;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0px 2px 0px 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.0s;
+  animation-name: fade;
+  animation-duration: 1.0s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: 0.5}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: 0.5}
+  to {opacity: 1}
+}
+>>>>>>> 45822f95c64ba405a095d8755eb5298f8b636532
