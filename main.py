@@ -12,9 +12,14 @@ class HomepageHandler(webapp2.RequestHandler):
         template = jinja_env.get_template('templates/homepage.html')
         self.response.write(template.render())
 
+class AboutUsHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_env.get_template('templates/about_us.html')
+        self.response.write(template.render())
 
 
 
 app = webapp2.WSGIApplication([
     ('/', HomepageHandler),
+    ('/about_us', AboutUsHandler)
 ], debug=True)
