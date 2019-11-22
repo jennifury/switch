@@ -31,10 +31,24 @@
 		<form>
 			<ul>
 				<li class="question"><label for="category">Category</label></li>
-				<li class="input"><input type="text" name="category" id="category" style="width:35%"/></li>
+				<li class="input">
+					<select name="category" id="category" style="width:35%">
+						<option disabled selected value> -- select a category -- </option>
+					  <option value="selling">Selling</option>
+					  <option value="trading">Trading</option>
+						<option value="donating">Donating</option>
+						<option value="freelance">Freelance</option>
+					</select>
+				</li>
 
 				<li class="question"><label for="subcategory">Seeking or Looking</label>
-				<li class="input"><input type="text" name="subcategory" id="subcategory" style="width:35%"/></li>
+				<li class="input">
+					<select name="subcategory" id="subcategory" style="width:35%">
+						<option disabled selected value> -- select a subcategory -- </option>
+					  <option value="seeking">Seeking</option>
+					  <option value="looking">Looking</option>
+					</select>
+				</li>
 
 				<li class="question"><label for="title">Title</label>
 				<li class="input"><input type="text" name="title" id="title" style="width:35%"/></li>
