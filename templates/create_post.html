@@ -12,10 +12,10 @@
 function onSelection() {
     if (document.getElementById("category").value === "donating") {
         document.getElementById("price").setAttribute("disabled", true);
-        document.getElementsByName('price')[0].placeholder='disabled';
+        document.getElementsByName('price')[0].value='FREE';
     } else {
         document.getElementById('price').removeAttribute('disabled');
-        document.getElementsByName('price')[0].placeholder='';
+        document.getElementsByName('price')[0].value='';
     }
 }
 </script>
@@ -40,11 +40,11 @@ function onSelection() {
 	</header>
 
 	<div id="createpost">
-		<form>
+		<form name="post">
 			<ul>
 				<li class="question"><label for="category">Category</label></li>
 				<li class="input">
-					<select name="category" id="category" onChange="onSelection()" style="width:35%">
+					<select name="category" id="category" onChange="onSelection()" style="width:35%" required>
 						<option disabled selected value> -- select a category -- </option>
 					  <option value="selling">Selling</option>
 					  <option value="trading">Trading</option>
@@ -55,7 +55,7 @@ function onSelection() {
 
 				<li class="question"><label for="subcategory">Seeking or Looking</label>
 				<li class="input">
-					<select name="subcategory" id="subcategory" style="width:35%">
+					<select name="subcategory" id="subcategory" style="width:35%" required>
 						<option disabled selected value> -- select a subcategory -- </option>
 					  <option value="seeking">Seeking</option>
 					  <option value="looking">Looking</option>
@@ -63,16 +63,16 @@ function onSelection() {
 				</li>
 
 				<li class="question"><label for="title">Title</label>
-				<li class="input"><input type="text" name="title" id="title" style="width:35%"/></li>
+				<li class="input"><input type="text" name="title" id="title" style="width:35%" required/></li>
 
 				<li class="question"><label for="price">Price</label></li>
-				<li class="input"><input type="text" name="price" id="price" style="width:35%"/></li>
+				<li class="input"><input type="text" name="price" id="price" style="width:35%" required/></li>
 
 				<li class="question"><label for="description">Description</label></li>
-				<li class="input"><textarea name="description" id="description" rows="6" cols="90" style="width:70%"></textarea></li>
+				<li class="input"><textarea name="description" id="description" rows="6" cols="90" style="width:70%" required></textarea></li>
 
 				<li class="question"><label for="communication">Form of Communication</label></li>
-				<li class="input"><input name="communication" id="communication" style="width:35%"></textarea></li>
+				<li class="input"><input name="communication" id="communication" style="width:35%" required></textarea></li>
 
 				<li class="input"><input class="submit" type="submit" value="Submit"></li>
 			</ul>
