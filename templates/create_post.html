@@ -4,9 +4,21 @@
 <meta charset="utf-8">
 <title>Create a Post</title>
 <link href="/Users/taha/Documents/cmpe133/switch-Taha/static/css/index.css" type="text/css" rel="stylesheet"/>
-<link rel="shortcut icon" href="img/switchfavicon.png" type="image/x-icon">
-<link rel="icon" href="img/switchfavicon.png" type="image/x-icon">
+<link rel="shortcut icon" href="/Users/taha/Documents/cmpe133/switch-Taha/static/img/switchfavicon.png" type="image/x-icon">
+<link rel="icon" href="/Users/taha/Documents/cmpe133/switch-Taha/static/img/switchfavicon.png" type="image/x-icon">
 </head>
+
+<script type="text/javascript">
+function onSelection() {
+    if (document.getElementById("category").value === "donating") {
+        document.getElementById("price").setAttribute("disabled", true);
+        document.getElementsByName('price')[0].placeholder='disabled';
+    } else {
+        document.getElementById('price').removeAttribute('disabled');
+        document.getElementsByName('price')[0].placeholder='';
+    }
+}
+</script>
 
 <body>
 
@@ -32,7 +44,7 @@
 			<ul>
 				<li class="question"><label for="category">Category</label></li>
 				<li class="input">
-					<select name="category" id="category" style="width:35%">
+					<select name="category" id="category" onChange="onSelection()" style="width:35%">
 						<option disabled selected value> -- select a category -- </option>
 					  <option value="selling">Selling</option>
 					  <option value="trading">Trading</option>
