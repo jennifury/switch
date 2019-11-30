@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Create a Post</title>
+<link href="/Users/taha/Documents/cmpe133/switch-Taha/static/css/index.css" type="text/css" rel="stylesheet"/>
+<link rel="shortcut icon" href="/Users/taha/Documents/cmpe133/switch-Taha/static/img/switchfavicon.png" type="image/x-icon">
+<link rel="icon" href="/Users/taha/Documents/cmpe133/switch-Taha/static/img/switchfavicon.png" type="image/x-icon">
+</head>
+
+<script type="text/javascript">
+function onSelection() {
+    if (document.getElementById("category").value === "donating") {
+        document.getElementById("price").setAttribute("disabled", true);
+        document.getElementsByName('price')[0].value='FREE';
+    } else {
+        document.getElementById('price').removeAttribute('disabled');
+        document.getElementsByName('price')[0].value='';
+    }
+}
+</script>
+
+<body>
+
+  <nav>
+<a href="/"> <img class="logo" src=/static/img/SJSUSwitch.png alt="SJSU Switch" height="120px"></a>
+
+		<ul>
+			<li><a href="/donate" >Donate</a></li>
+			<li><a href="/freelance" >Freelance</a></li>
+			<li><a href="/selling" >Sell</a></li>
+			<li><a href="/trade" >Trade</a></li>
+			<li><a href="/wishlist">Profile</a></li>
+		</ul>
+
+	</nav>
+
+<main>
+	<header>
+		<h1 id="header">Create Post</h1>
+	</header>
+
+	<div id="createpost">
+		<form name="post">
+			<ul>
+				<li class="question"><label for="category">Category</label></li>
+				<li class="input">
+					<select name="category" id="category" onChange="onSelection()" style="width:35%" required>
+						<option disabled selected value> -- select a category -- </option>
+					  <option value="selling">Selling</option>
+					  <option value="trading">Trading</option>
+						<option value="donating">Donating</option>
+						<option value="freelance">Freelance</option>
+					</select>
+				</li>
+
+				<li class="question"><label for="subcategory">Seeking or Looking</label>
+				<li class="input">
+					<select name="subcategory" id="subcategory" style="width:35%" required>
+						<option disabled selected value> -- select a subcategory -- </option>
+					  <option value="seeking">Seeking</option>
+					  <option value="looking">Looking</option>
+					</select>
+				</li>
+
+				<li class="question"><label for="title">Title</label>
+				<li class="input"><input type="text" name="title" id="title" style="width:35%" required/></li>
+
+				<li class="question"><label for="price">Price</label></li>
+				<li class="input"><input type="text" name="price" id="price" style="width:35%" required/></li>
+
+				<li class="question"><label for="description">Description</label></li>
+				<li class="input"><textarea name="description" id="description" rows="6" cols="90" style="width:70%" required></textarea></li>
+
+				<li class="question"><label for="communication">Form of Communication</label></li>
+				<li class="input"><input name="communication" id="communication" style="width:35%" required></textarea></li>
+
+				<li class="input"><input class="submit" type="submit" value="Submit"></li>
+			</ul>
+		</form>
+	</div>
+</main>
+
+<footer>
+  <ul>
+    <li><a href="/about_us"> About Us</a></li>
+    <li><a href="/contact_us">Contact Us</a></li>
+  </ul>
+  <p>JSTR Incorporated Corporation LLC</p>
+</footer>
+
+</body>
+</html>
