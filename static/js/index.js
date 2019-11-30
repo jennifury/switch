@@ -47,3 +47,14 @@ function showSlides() {
     dots[slideIndex-1].className += " active";
     setTimeout(showSlides, 5000); // Change image every 3 seconds
 }
+
+//createpost
+function onSelection() {
+    if (document.getElementById("category").value === "donating") {
+        document.getElementById("price").setAttribute("disabled", true);
+        document.getElementsByName('price')[0].value='FREE';
+    } else {
+        document.getElementById('price').removeAttribute('disabled');
+        document.getElementsByName('price')[0].value='';
+    }
+}
