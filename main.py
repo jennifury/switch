@@ -61,5 +61,5 @@ app = webapp2.WSGIApplication([
     ('/freelance', FreelanceHandler),
     ('/trade', TradingHandler),
     ('/wishlist', WishlistHandler),
-    ('/create_post', WishlistHandler),
+    ('/create_post', CreatePostHandler),
 ], debug=True)
