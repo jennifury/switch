@@ -29,7 +29,7 @@ class SellingHandler(webapp2.RequestHandler):
 
 class DonateHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_env.get_template('templates/donate.html')
+        template = jinja_env.get_template('templates/donating.html')
         self.response.write(template.render())
 
 class FreelanceHandler(webapp2.RequestHandler):
