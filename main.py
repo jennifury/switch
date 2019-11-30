@@ -47,6 +47,11 @@ class WishlistHandler(webapp2.RequestHandler):
         template = jinja_env.get_template('templates/wishlist.html')
         self.response.write(template.render())
 
+class CreatePostHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_env.get_template('templates/create_post.html')
+        self.response.write(template.render())
+
 app = webapp2.WSGIApplication([
     ('/', HomepageHandler),
     ('/about_us', AboutUsHandler),
@@ -56,4 +61,5 @@ app = webapp2.WSGIApplication([
     ('/freelance', FreelanceHandler),
     ('/trade', TradingHandler),
     ('/wishlist', WishlistHandler),
+    ('/create_post', WishlistHandler),
 ], debug=True)
