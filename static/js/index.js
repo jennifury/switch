@@ -48,6 +48,7 @@ function showSlides() {
     dots[slideIndex-1].className += " active";
     setTimeout(showSlides, 5000); // Change image every 3 seconds
 }
+<<<<<<< HEAD
 =======
 var slideIndex = 0;
 showSlides();
@@ -99,3 +100,16 @@ function showSlides() {
     setTimeout(showSlides, 5000); // Change image every 3 seconds
 }
 >>>>>>> 45822f95c64ba405a095d8755eb5298f8b636532
+=======
+
+//createpost
+function onSelection() {
+    if (document.getElementById("category").value === "donating") {
+        document.getElementById("price").setAttribute("disabled", true);
+        document.getElementsByName('price')[0].value='FREE';
+    } else {
+        document.getElementById('price').removeAttribute('disabled');
+        document.getElementsByName('price')[0].value='';
+    }
+}
+>>>>>>> 46dce21fa276b9c566c34f395ef515394e86d5aa
