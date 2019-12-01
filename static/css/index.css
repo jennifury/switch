@@ -18,6 +18,12 @@ img.logo{
 	margin-left: 5%;
 }
 
+a.logo{
+	padding: 0px;
+	margin: 0px;
+	background-color: none;
+}
+
 nav{
 	max-height: 120px;
 	background-color: #0059B3;
