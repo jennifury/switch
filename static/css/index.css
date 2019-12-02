@@ -15,7 +15,7 @@
 }
 
 img.logo{
-	margin-left: 100px;
+	margin-left: 5%;
 }
 
 nav{
@@ -28,8 +28,9 @@ nav ul{
 	text-align: center;
 	color: white;
 	float: right;
-	margin-right: 100px;
+	padding-right: 5%;
 	margin-top: 52px;
+	background-color: #0059B3;
 }
 
 nav li{
@@ -37,6 +38,7 @@ nav li{
 	color: white;
 	font-size: 22px;
 	font-weight: 100;
+	background-color: #0059B3;
 }
 
 nav a{
@@ -61,13 +63,34 @@ nav a:active{
 	text-decoration: none;
 }
 
+/* Break for Homepage*/
+.break{
+	margin-top: 20px;
+}
+
+/*Sell page*/
+#header{
+	font-size: 70px;
+	color: #E7E24C;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
 /*three columns of post*/
 .column{
 	background-color: #E6E6E6;
 	float:left;
-	width: 27.33%;
+	width: 28.5%;
 	padding:15px;
 	margin: 10px;
+}
+
+.row{
+	margin-bottom: 20px;
+}
+
+#center{
+	margin: auto 2% auto 2%;
 }
 
 .row:after{
@@ -125,17 +148,117 @@ nav a:active{
 
 }
 
-/* Break */
-.break{
-	margin-top: 20px;
+/*About Us Page*/
+#aboutus{
+	background-color: #E6E6E6;
+	padding: 15px;
+	min-height: 610px;
+	margin-left: 5%;
+	margin-bottom: 10px;
+	width: 60%;
+	float: left;
 }
 
+#theteam{
+	background-color: #E6E6E6;
+	padding: 15px;
+	min-height: 610px;
+	margin-right: 5%;
+	margin-bottom: 10px;
+	width: 28%;
+	float: right;
+}
+
+p.theteam{
+	background-color: #E6E6E6;
+}
+
+.aboutusdesc{
+	background-color: #E6E6E6;
+}
+
+/*Contact Us Page*/
+main{
+	min-height: 730px;
+}
+
+#businessinfo{
+	background-color: #E6E6E6;
+	padding: 15px;
+	min-height: 610px;
+	margin-left: 5%;
+	margin-bottom: 10px;
+	width: 28%;
+	float: left;
+}
+
+#sayhello{
+	background-color: #E6E6E6;
+	padding: 15px;
+	min-height: 610px;
+	margin-right: 5%;
+	margin-bottom: 10px;
+	width: 60%;
+	float: right;
+}
+
+h1.h1{
+	background-color: #E6E6E6;
+	font-size: 37px;
+	padding-bottom: 2px;
+	border-bottom: 3px solid #0059B3;
+}
+
+h2.heading{
+	background-color: #E6E6E6;
+}
+
+li.question{
+	list-style:none;
+	padding-top:20px;
+	background-color: #E6E6E6;
+}
+
+li.input{
+	list-style:none;
+	background-color: #E6E6E6;
+}
+
+p.sub{
+	background-color: #E6E6E6;
+	padding-bottom:20px;
+}
+
+label{
+	background-color: #E6E6E6;
+}
+
+input{
+	border: 1px solid #0059B3;
+	padding: 5px;
+}
+
+input.submit{
+	margin-top: 20px;
+	padding: 10px;
+	font-size: 15px;
+}
+
+li.textarea{
+	background-color: #0059B3;
+}
+
+textarea{
+	border: 1px solid #0059B3;
+	padding: 5px;
+	resize:none;
+}
 /* Footer */
 footer{
 	min-height: 80px;
-	margin: auto;
 	background-color: #0059B3;
-	padding: 27px 0px 0px 100px;
+	padding-left: 5%;
+	padding-top: 25px;
 }
 
 footer p{
@@ -143,7 +266,8 @@ footer p{
 	background-color: #0059B3;
 	font-size: 22px;
 	font-weight: 100;
-	margin-left: 870px;
+	float: right;
+	padding-right: 5%;
 }
 
 footer ul{
@@ -151,6 +275,7 @@ footer ul{
 	text-align: center;
 	color: white;
 	float: left;
+	background-color: #0059B3;
 }
 
 footer li{
@@ -158,6 +283,7 @@ footer li{
 	color: white;
 	font-size: 22px;
 	font-weight: 100;
+	background-color: #0059B3;
 }
 
 footer a{
@@ -179,4 +305,81 @@ footer a:hover{
 footer a:active{
 	color: white;
 	text-decoration: none;
+}
+
+/* Slideshow Layout */
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 1100px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #717171;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0px 2px 0px 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.0s;
+  animation-name: fade;
+  animation-duration: 1.0s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: 0.5}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: 0.5}
+  to {opacity: 1}
 }
