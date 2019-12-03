@@ -259,6 +259,43 @@ textarea{
 	resize:none;
 }
 
+/* User/Profile Page */
+#yourlistings{	/* Left half of content */
+	background-color: white;
+	min-height: 610px;
+	margin-left: 5%;
+	margin-bottom: 10px;
+	width: 44%;
+	float: left;
+}
+
+#wishlist{	/* Right half of content */
+	background-color: white;
+	padding: auto 15px 15px 15px;
+	min-height: 610px;
+	margin-right: 5%;
+	width: 44%;
+	float: right;
+}
+
+.wishlistt{	/* Your Listing + Wishlist Headers */
+	padding: 15px;
+	background-color: #E6E6E6;
+	margin-bottom: 20px;
+}
+
+.wishlistcolumn{ /* Post */
+	background-color: #E6E6E6;
+	float: left;
+	width: 70%;
+	padding: 15px;
+	margin: auto 15% 20px 15%;
+}
+
+.wishlistrow{ /* Add bottom margin to each post */
+	margin-bottom: 20px;
+}
+
 /* Footer */
 footer{
 	min-height: 80px;
