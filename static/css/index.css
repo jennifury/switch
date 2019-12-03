@@ -259,6 +259,13 @@ textarea{
 	resize:none;
 }
 
+/* Create a Post Page */
+#createpost{
+	margin: auto 5% auto 5%;
+	padding: 15px;
+	background-color: #E6E6E6;
+}
+
 /* User/Profile Page */
 #yourlistings{	/* Left half of content */
 	background-color: white;
