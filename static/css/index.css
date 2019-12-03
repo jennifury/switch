@@ -80,17 +80,20 @@ nav a:active{
 .column{
 	background-color: #E6E6E6;
 	float:left;
-	width: 28.5%;
+	width: 31.33%; /*originally 31.33%*/ 
 	padding:15px;
 	margin: 10px;
 }
 
+.container{
+	padding-left: 40px;
+}
 .row{
 	margin-bottom: 20px;
 }
 
 #center{
-	margin: auto 2% auto 2%;
+	margin: 0 auto;
 }
 
 .row:after{
@@ -99,6 +102,15 @@ nav a:active{
 	clear: both;
 }
 
+/*button for the post*/
+.button1 {padding: 5px 5px}
+.triangle{
+	width: 0;
+	height: 0;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-bottom: 20px solid white;
+}
 /*heading*/
 .centerHeading{
 	align-content: space-around;
