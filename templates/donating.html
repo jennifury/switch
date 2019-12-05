@@ -30,6 +30,31 @@
 		<h1 id="header">Donating</h1>
 	</header>
 
+  <!--   General ITEM -->
+<section class="cards">
+  {% for info in items %}
+    {% for i in range(num_of_items) %}
+    <article class="card">
+      <picture class="thumbnail">
+        <img class="category__00"src='imageit?index={{ i }}' alt='no image'></img>
+      </picture>
+      <div class="card-content">
+        <p class="category category__00">{{info.subcat}}</p>
+        <h4>{{info.title}}</h4>
+        <p>{{info.price}}</p>
+        <p>{{info.comm}}</p>
+        <p>{{info.paragraph}}</p>
+     </div><!-- .card-content -->
+      <footer id="cardfoot">
+        <div class="post-meta">
+          <span class="date"><i class="fa fa-clock-o"></i> Today</span>
+          <span class="comments"><i class="fa fa-comments"></i><a href="#"> San Jose</a></span>
+          </div>
+      </footer>
+    </article>
+    {% endfor %}
+  {% endfor %}
+
   <div class="row">
 		<div class="column">
 			<h3 class="centerHeading">Introduction to Engineering</h3>
