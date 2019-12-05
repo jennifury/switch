@@ -94,7 +94,7 @@ class CreatePostHandler(webapp2.RequestHandler):
         self.response.write(post_template.render())
 
     def post(self):
-        post_cat = self.request.get('catego ry')
+        post_cat = self.request.get('category')
         post_scat = self.request.get('subcategory')
         post_title = self.request.get('title')
         post_price = self.request.get('price')
