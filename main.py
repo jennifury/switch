@@ -79,6 +79,11 @@ class WishlistHandler(webapp2.RequestHandler):
         wish_template = jinja_env.get_template('templates/wishlist.html')
         self.response.write(wish_template.render())
 
+class ThanksHandler(webapp2.RequestHandler):
+    def get(self):
+        thanks_template = jinja_env.get_template('templates/thank_you.html')
+        self.response.write(thanks_template.render())
+
 class NewPost(ndb.Model):
     image = ndb.BlobProperty()
     category = ndb.StringProperty(required=True)
@@ -108,7 +113,7 @@ class CreatePostHandler(webapp2.RequestHandler):
                             price = post_price, communication = post_comm,image= db.Blob(str(post_pics)))
 
         new_name.put()
-        self.redirect("/thankyou")
+        self.redirect('/thank_you')
 
 class ImageHandler(webapp2.RequestHandler):
     def get(self):
@@ -125,10 +130,7 @@ class ImageHandler(webapp2.RequestHandler):
         else:
           self.redirect('/static/img/noimage.svg')
 
-class ThanksHandler(webapp2.RequestHandler):
-    def get(self):
-        thanks_template = jinja_env.get_template('templates/thank_you.html')
-        self.response.write(thanks_template.render())
+
 
 app = webapp2.WSGIApplication([
     ('/', HomepageHandler),
@@ -139,6 +141,6 @@ app = webapp2.WSGIApplication([
     ('/freelance', FreelanceHandler),
     ('/trade', TradingHandler),
     ('/wishlist', WishlistHandler),
-    ('/thankyou', ThanksHandler),
+    ('/thank_you', ThanksHandler),
     ('/create_post', CreatePostHandler),
 ], debug=True)

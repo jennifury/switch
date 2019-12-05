@@ -82,6 +82,9 @@ nav a:active{
 	margin-bottom: 10px;
 }
 
+#ty{
+	text-align: center;
+}
 /*three columns*/
 .column{
 	background-color: #E6E6E6;
