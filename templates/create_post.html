@@ -7,6 +7,7 @@
   <link href="/Users/taha/Documents/cmpe133/switch-Taha/static/css/index.css" type="text/css" rel="stylesheet" />
   <link rel="shortcut icon" href="/Users/taha/Documents/cmpe133/switch-Taha/static/img/switchfavicon.png" type="image/x-icon">
   <link rel="icon" href="/Users/taha/Documents/cmpe133/switch-Taha/static/img/switchfavicon.png" type="image/x-icon">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
 </head>
 
 <script type="text/javascript">
@@ -22,27 +23,6 @@
 </script>
 
 <body>
-  <script>
-    var firebaseConfig = {
-      apiKey: "AIzaSyCC7xpXuvFD1jp6mrJZj6JQaWK1DjNgdW8",
-      authDomain: "switch-29c7c.firebaseapp.com",
-      databaseURL: "https://switch-29c7c.firebaseio.com",
-      projectId: "switch-29c7c",
-      storageBucket: "switch-29c7c.appspot.com",
-      messagingSenderId: "53630457461",
-      appId: "1:53630457461:web:5caf1bdee5488f43f14a3c",
-      measurementId: "G-YE81ERQJME"
-    };
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-    function writeData() {
-      firebase.database().ref("User").push({
-        name: document.getElementById("nameField").value,
-        age: document.getElementById("ageField").value
-      });
-    }
-  </script>
-
   <nav>
     <img class="logo" src="/Users/taha/Documents/cmpe133/switch-Taha/static/img/SJSUSwitch.png" alt="SJSU Switch" height="120px">
 
@@ -98,6 +78,18 @@
           <li class="input"><input class="submit" type="submit" value="Submit"></li>
         </ul>
       </form>
+      <table>
+        <tr>
+            <td>Category</td>
+            <td>Subcategory</td>
+            <td>Title</td>
+            <td>Price</td>
+            <td>Description</td>
+            <td>Communication</td>
+        </tr>
+        <tbody id="posts_table">
+        </tbody>
+    </table>
     </div>
   </main>
 
