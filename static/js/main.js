@@ -1,3 +1,4 @@
+// CONFIG DATABASE
 var config = {
   apiKey: "AIzaSyCC7xpXuvFD1jp6mrJZj6JQaWK1DjNgdW8",
   authDomain: "switch-29c7c.firebaseapp.com",
@@ -11,10 +12,9 @@ var config = {
 firebase.initializeApp(config);
 firebase.analytics();
 
+// ADD TO DATABASE
 var postsRef = firebase.database().ref('posts');
-
 document.getElementById('post').addEventListener('submit', submitForm);
-
 function submitForm(e){
   e.preventDefault();
   var category = getInputVal('category');
@@ -26,12 +26,10 @@ function submitForm(e){
   savePost(category, subcategory, title, price, description, communication);
   document.getElementById('post').reset();
 }
-
 function getInputVal(id){
   return document.getElementById(id).value;
 }
-
-function savePost(category, subcategory, title, price, description, communication){
+function savePost(category, subcategory, title, price, description, communication) {
   var newPostRef = postsRef.push();
   newPostRef.set({
     category:category,
@@ -42,3 +40,20 @@ function savePost(category, subcategory, title, price, description, communicatio
     communication:communication
   });
 }
+
+// RETRIEVE FROM DATABASE
+var rootRef = firebase.database().ref().child("posts");
+rootRef.on("child_added", snap => {
+  var category = snap.child("category").val();
+  var subcategory = snap.child("subcategory").val();
+  var title = snap.child("title").val();
+  var price = snap.child("price").val();
+  var description = snap.child("description").val();
+  var communication = snap.child("communication").val();
+  $('#posts_table').append('<tr><td>' + category +'</td>' +
+                           '<td>' + subcategory +'</td>' +
+                           '<td>' + title +'</td><' +
+                           '<td>' + price +'</td>' +
+                           '<td>' + description +'</td>' +
+                           '<td>' + communication +'</td></tr>');
+});
