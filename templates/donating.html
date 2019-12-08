@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html class = 'homestead'>
 <head>
 <meta charset="utf-8">
 
@@ -27,99 +27,101 @@
  </nav>
  <!-- Heading Indicating which page they are on-->
  <header>
-   <<h1 id="header">Donating</h1>
+   <h1 id="header">Donating</h1>
  </header>
 
+ <div class="row">
+ <!-- General which page they are on-->
 
-  <!--   General ITEM -->
-<section class="cards">
- {% for info in items %}
-   {% for i in range(num_of_items) %}
-   <article class="card">
-     <picture class="thumbnail">
-       <img class="category__00"src='imageit?index={{ i }}' alt='no image'></img>
-     </picture>
-     <div class="card-content">
-       <p class="category category__00">{{info.subcat}}</p>
-       <h4>{{info.title}}</h4>
-       <p>{{info.price}}</p>
-       <p>{{info.comm}}</p>
-       <p>{{info.paragraph}}</p>
-    </div><!-- .card-content -->
-     <footer id="cardfoot">
-       <div class="post-meta">
-         <span class="date"><i class="fa fa-clock-o"></i> Today</span>
-         <span class="comments"><i class="fa fa-comments"></i><a href="#"> San Jose</a></span>
+     {% for i in range(num_of_items) %}
+         <div class="column">
+           <h3 class="centerHeading">{{items[i].title}}</h3>
+           <table id="Engineering">
+             <tr>
+               <td><img src='imageit?index={{ i }}' alt='no image' style="width:200px;height:300px"></td>
+             </tr>
+           </table>
+
+           <h4 style="background: #E6E6E6">{{items[i].subcat}}</h4>
+           <h4 style="background: #E6E6E6">Description:</h4>
+           <p style="font-size:13px;background: #E6E6E6">
+             {{items[i].description}}
+             <br>
+             <br><strong style="font-size: 15px;background: #E6E6E6">Price:
+             </strong> {{items[i].price}}
+           </p>
+           <h4 style="background: #E6E6E6">Form of Communication:</h4>
+           <p style="font-size: 13px;background: #E6E6E6">
+             {{items[i].communication}}
+           </p>
          </div>
-     </footer>
-   </article>
-   {% endfor %}
- {% endfor %}
+     {% endfor %}
 
 
- 		<div class="column">
- 			<h3 class="centerHeading">Introduction to Engineering</h3>
- 			<table id="Engineering">
- 			<tr>
- 				<td><img src=/static/img/Introduction_to_Engineering_Textbook.png alt="Introduction to Engineering Textbook" style="width:200px;height:300px"></td>
- 			</tr>
- 			</table>
- 			<h4 style="background: #E6E6E6">Description:</h4>
- 			<p style="font-size:13px;background: #E6E6E6">
- 				Textbook for Engineering 10
- 				<br>
- 				<br><strong style="font-size: 15px;background: #E6E6E6">Price:</strong> $50
- 			</p>
- 			<h4 style="background: #E6E6E6">Form of Communication:</h4>
- 			<p style="font-size: 13px;background: #E6E6E6">
- 				Phone Number: (123) 456-7890
- 				<br>Email: 123@sjsu.edu
- 			</p>
- 		</div>
 
- 		<div class="column">
- 			<h3 class="centerHeading">Introduction To Algorithms</h3>
- 			<table id="Data">
- 			<tr>
- 				<td><img src=/static/img/Introduction_To_Algorithms.png alt="Introduction to Algorithms" style="width:250px;height:300px"></td>
- 			</tr>
- 			</table>
- 			<h4 style="background: #E6E6E6">Description:</h4>
- 			<p style="font-size:13px;background: #E6E6E6">
- 				Textbook for CS 146
- 				<br>Introduction for Algorithms (3rd Edition)
- 				<br><strong style="font-size: 15px;background: #E6E6E6">Price:</strong> $90
- 			</p>
- 			<h4 style="background: #E6E6E6">Form of Communication:</h4>
- 			<p style="font-size: 13px;background: #E6E6E6">
- 				Phone Number: (234) 567-8910
- 				<br>Email: 456@sjsu.edu
- 			</p>
- 		</div>
+   <div class="column">
+     <h3 class="centerHeading">Introduction to Engineering</h3>
+     <table id="Engineering">
+     <tr>
+       <td><img src=/static/img/Introduction_to_Engineering_Textbook.png alt="Introduction to Engineering Textbook" style="width:200px;height:300px"></td>
+     </tr>
+     </table>
+     <h4 style="background: #E6E6E6">Description:</h4>
+     <p style="font-size:13px;background: #E6E6E6">
+       Textbook for Engineering 10
+       <br>
+       <br><strong style="font-size: 15px;background: #E6E6E6">Price:</strong> $50
+     </p>
+     <h4 style="background: #E6E6E6">Form of Communication:</h4>
+     <p style="font-size: 13px;background: #E6E6E6">
+       Phone Number: (123) 456-7890
+       <br>Email: 123@sjsu.edu
+     </p>
+   </div>
 
- 		<div class="column">
- 			<h3 class="centerHeading">Public Speaking</h3>
- 			<table id="Public">
- 			<tr>
- 				<td><img src=/static/img/Public_speaking.png alt="Public Speaking" style="width:250px;height:300px"></td>
- 			</tr>
- 			</table>
- 			<h4 style="background: #E6E6E6">Description:</h4>
- 			<p style="font-size:13px;background: #E6E6E6">
- 				Textbook for COMM 20: Public Speaking
- 				<br>Public Speaking (7th Edition)
- 				<br><strong style="font-size: 15px;background: #E6E6E6">Price:</strong> $5
- 			</p>
- 			<h4 style="background: #E6E6E6">Form of Communication:</h4>
- 			<p style="font-size: 13px;background: #E6E6E6">
- 				Phone Number: (567) 891-1234
- 				<br>Email: 789@sjsu.edu
- 			</p>
- 		</div>
- 	</div>
+   <div class="column">
+     <h3 class="centerHeading">Introduction To Algorithms</h3>
+     <table id="Data">
+     <tr>
+       <td><img src=/static/img/Introduction_To_Algorithms.png alt="Introduction to Algorithms" style="width:250px;height:300px"></td>
+     </tr>
+     </table>
+     <h4 style="background: #E6E6E6">Description:</h4>
+     <p style="font-size:13px;background: #E6E6E6">
+       Textbook for CS 146
+       <br>Introduction for Algorithms (3rd Edition)
+       <br><strong style="font-size: 15px;background: #E6E6E6">Price:</strong> $90
+     </p>
+     <h4 style="background: #E6E6E6">Form of Communication:</h4>
+     <p style="font-size: 13px;background: #E6E6E6">
+       Phone Number: (234) 567-8910
+       <br>Email: 456@sjsu.edu
+     </p>
+   </div>
+
+   <div class="column">
+     <h3 class="centerHeading">Public Speaking</h3>
+     <table id="Public">
+     <tr>
+       <td><img src=/static/img/Public_speaking.png alt="Public Speaking" style="width:250px;height:300px"></td>
+     </tr>
+     </table>
+     <h4 style="background: #E6E6E6">Description:</h4>
+     <p style="font-size:13px;background: #E6E6E6">
+       Textbook for COMM 20: Public Speaking
+       <br>Public Speaking (7th Edition)
+       <br><strong style="font-size: 15px;background: #E6E6E6">Price:</strong> $5
+     </p>
+     <h4 style="background: #E6E6E6">Form of Communication:</h4>
+     <p style="font-size: 13px;background: #E6E6E6">
+       Phone Number: (567) 891-1234
+       <br>Email: 789@sjsu.edu
+     </p>
+   </div>
+ </div>
 
 
- </body>
+</body>
 
  <footer>
  	<ul>

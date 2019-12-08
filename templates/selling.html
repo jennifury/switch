@@ -32,29 +32,31 @@
 
 	<div class="row">
 	<!-- General which page they are on-->
-	{% for info in items %}
-        {% for i in range(num_of_items) %}
+
+			{% for i in range(num_of_items) %}
 					<div class="column">
-						<h3 class="centerHeading">{{info.title}}</h3>
+						<h3 class="centerHeading">{{items[i].title}}</h3>
 						<table id="Engineering">
 							<tr>
 								<td><img src='imageit?index={{ i }}' alt='no image' style="width:200px;height:300px"></td>
 							</tr>
 						</table>
+
+						<h4 style="background: #E6E6E6">{{items[i].subcat}}</h4>
 						<h4 style="background: #E6E6E6">Description:</h4>
 						<p style="font-size:13px;background: #E6E6E6">
-							{{info.description}}
+							{{items[i].description}}
 							<br>
 							<br><strong style="font-size: 15px;background: #E6E6E6">Price:
-							</strong> {{info.price}}
+							</strong> {{items[i].price}}
 						</p>
 						<h4 style="background: #E6E6E6">Form of Communication:</h4>
 						<p style="font-size: 13px;background: #E6E6E6">
-							{{info.communication}}
+							{{items[i].communication}}
 						</p>
 					</div>
-					{% endfor %}
-	{% endfor %}
+			{% endfor %}
+
 
 
 		<div class="column">

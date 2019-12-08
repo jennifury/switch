@@ -26,7 +26,7 @@ class ContactUsHandler(webapp2.RequestHandler):
 
 class SellingHandler(webapp2.RequestHandler):
     def get(self):
-        proceed = "selling"
+        proceed = "Selling"
         posts = NewPost.query().filter(NewPost.category == proceed).fetch()
 
         list_dict = {
@@ -38,7 +38,7 @@ class SellingHandler(webapp2.RequestHandler):
 
 class DonateHandler(webapp2.RequestHandler):
     def get(self):
-        proceed = "donating"
+        proceed = "Donating"
         posts = NewPost.query().filter(NewPost.category == proceed).fetch()
 
         list_dict = {
@@ -50,7 +50,7 @@ class DonateHandler(webapp2.RequestHandler):
 
 class FreelanceHandler(webapp2.RequestHandler):
     def get(self):
-        proceed = "freelance"
+        proceed = "Freelance"
         posts = NewPost.query().filter(NewPost.category == proceed).fetch()
 
         list_dict = {
@@ -62,7 +62,7 @@ class FreelanceHandler(webapp2.RequestHandler):
 
 class TradingHandler(webapp2.RequestHandler):
     def get(self):
-        proceed = "trading"
+        proceed = "Trading"
         posts = NewPost.query().filter(NewPost.category == proceed).fetch()
 
         list_dict = {
@@ -99,18 +99,18 @@ class CreatePostHandler(webapp2.RequestHandler):
         self.response.write(post_template.render())
 
     def post(self):
-        post_cat = self.request.get('category')
-        post_scat = self.request.get('subcategory')
-        post_title = self.request.get('title')
-        post_price = self.request.get('price')
-        post_comm = self.request.get('communication')
-        post_pics = self.request.get('pics')
+        post_cat = self.request.get('cat')
+        post_scat = self.request.get('subcat')
+        post_title = self.request.get('titl')
+        post_price = self.request.get('pric')
+        post_comm = self.request.get('commun')
+        post_pics = self.request.get('picture')
         # file_upload = self.request.POST.get("pics", None)
-        post_desc = self.request.get('description')
+        post_desc = self.request.get('descrip')
 
         # new_name = NewPost(name=poster_name, item = post_item, paragraph = post_desc, image= file_upload.file.read())
         new_name = NewPost(category=post_cat, subcategory = post_scat, description = post_desc, title = post_title,
-                            price = post_priSce, communication = post_comm,image= db.Blob(str(post_pics)))
+                            price = post_price, communication = post_comm,image= db.Blob(str(post_pics)))
 
         new_name.put()
         self.redirect('/thank_you')
@@ -119,17 +119,17 @@ class ImageHandler(webapp2.RequestHandler):
     def get(self):
         posts = NewPost.query().fetch()
 
-        list_dict = {
+        image_dict = {
         "num_of_items": len(posts)
         }
         index = self.request.get('index')
         index = int(index)
+        posts[index].image
         if posts[index].image:
           self.response.headers['Content-Type'] = "image/jpg"
           self.response.out.write(posts[index].image)
         else:
-          self.redirect('/static/img/noimage.svg')
-
+          self.redirect('static/noimage.svg')
 
 
 app = webapp2.WSGIApplication([
@@ -143,4 +143,5 @@ app = webapp2.WSGIApplication([
     ('/wishlist', WishlistHandler),
     ('/thank_you', ThanksHandler),
     ('/create_post', CreatePostHandler),
+    ('/imageit', ImageHandler),
 ], debug=True)
