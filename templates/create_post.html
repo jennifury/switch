@@ -4,22 +4,22 @@
 <meta charset="utf-8">
 <title>Create a Post</title>
 <link href=/static/css/index.css rel="stylesheet"/>
-<link rel="shortcut icon" href=/static/css/img/switchfavicon.png type="image/x-icon">
-<link rel="icon" href=/static/css/img/switchfavicon.png type="image/x-icon">
+<link rel="shortcut icon" href=/static/img/switchfavicon.png type="image/x-icon">
+<link rel="icon" href=/static/img/switchfavicon.png type="image/x-icon">
 </head>
 
 
 <body>
 
   <nav>
-<a href="/"> <img class="logo" src=/static/img/SJSUSwitch.png alt="SJSU Switch" height="120px"></a>
-
+<a href="/" class="logo"><img class="logo" src="/static/img/SJSUSwitch.png" alt="SJSU Switch" height="116px"></a>
 		<ul>
 			<li><a href="/donate" >Donate</a></li>
 			<li><a href="/freelance" >Freelance</a></li>
 			<li><a href="/selling" >Sell</a></li>
 			<li><a href="/trade" >Trade</a></li>
 			<li><a href="/wishlist">Profile</a></li>
+      <li><a href="/create_post" >+</a></li>
 		</ul>
 
 	</nav>
@@ -30,7 +30,7 @@
 	</header>
 
 	<div id="createpost">
-		<form name="post">
+		<form name="post" action = "/create_post"  enctype="multipart/form-data"  method="post">
 			<ul>
 				<li class="question"><label for="category">Category</label></li>
 				<li class="input">
@@ -64,9 +64,10 @@
 				<li class="question"><label for="communication">Form of Communication</label></li>
 				<li class="input"><input name="commun" style="width:35%" required></textarea></li>
 
+        <li class="question"><label for="pics">Upload an image</label></li>
+        <li class="input"><input type="file"  id="pics" name="pics" accept="image/*" required="required" multiple></li>
+
 				<li class="input"><input class="submit" type="submit" value="Submit"></li>
-    <li class="question"><label for="pics">Upload an image</label></li>
-    <li class="input"><input type="file" name="pic" accept="image/*" required="required" multiple> </li>
 
       </ul>
 		</form>

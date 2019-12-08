@@ -61,3 +61,18 @@ function onSelection() {
         document.getElementsByName('price')[0].value='';
     }
 }
+
+
+const img = document.querySelector('img');
+  img.style.cursor = 'pointer';
+  img.addEventListener(
+      "click",
+      (event) => {
+          console.log(event);
+          img.style.height = '400px';
+          img.style.width = '400px';
+      });
+}
+
+// Run javascript after the DOM loads.
+window.addEventListener("load", onLoad);

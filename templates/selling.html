@@ -6,19 +6,15 @@
 <title>SJSU Switch</title>
 
 <link href="/static/css/index.css" type="text/css" rel="stylesheet"/>
-<!--FAVICON-->
-<!--<link rel="shortcut icon" href="INSERT FAVICON HERE" type="image/x-icon">
-<link rel="icon" href="INSERT FAVICON HERE" type="image/x-icon">-->
+<link rel="shortcut icon" href="/static/img/switchfavicon.png" type="image/x-icon">
+<link rel="icon" href="/static/img/switchfavicon.png" type="image/x-icon">
 
 </head>
 
 <body>
 	<nav>
-<<<<<<< HEAD
-		<a href="/" <img class="logo" src="https://raw.githubusercontent.com/jennifury/switch/Jennifer/static/img/SJSUSwitch.png" alt="SJSU Switch" height="120px"></a>
-=======
 	<a href="/"> <img class="logo" src=/static/img/SJSUSwitch.png alt="SJSU Switch" height="120px"></a>
->>>>>>> 46dce21fa276b9c566c34f395ef515394e86d5aa
+
 
 		<ul>
 			<li><a href="/donate" >Donate</a></li>
@@ -26,6 +22,7 @@
 			<li><a href="/selling" >Sell</a></li>
 			<li><a href="/trade" >Trade</a></li>
 			<li><a href="/wishlist">Profile</a></li>
+			<li><a href="/create_post" >+</a></li>
 		</ul>
 
 	</nav>
@@ -35,6 +32,32 @@
 	</header>
 
 	<div class="row">
+	<!-- General which page they are on-->
+	{% for info in items %}
+        {% for i in range(num_of_items) %}
+					<div class="column">
+						<h3 class="centerHeading">{{info.title}}</h3>
+						<table id="Engineering">
+							<tr>
+								<td><img src='imageit?index={{ i }}' alt='no image' style="width:200px;height:300px"></td>
+							</tr>
+						</table>
+						<h4 style="background: #E6E6E6">Description:</h4>
+						<p style="font-size:13px;background: #E6E6E6">
+							{{info.description}}
+							<br>
+							<br><strong style="font-size: 15px;background: #E6E6E6">Price:
+							</strong> {{info.price}}
+						</p>
+						<h4 style="background: #E6E6E6">Form of Communication:</h4>
+						<p style="font-size: 13px;background: #E6E6E6">
+							{{info.communication}}
+						</p>
+					</div>
+					{% endfor %}
+	{% endfor %}
+
+
 		<div class="column">
 			<h3 class="centerHeading">Introduction to Engineering</h3>
 			<table id="Engineering">

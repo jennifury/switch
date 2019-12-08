@@ -18,6 +18,11 @@
 img.logo{
 	margin-left: 5%;
 }
+a.logo{
+	padding: 0px;
+	margin: 0px;
+	background-color: none;
+}
 
 nav{
 	max-height: 120px;
@@ -71,18 +76,23 @@ nav a:active{
 
 /*Sell Page*/
 #header{
+	padding: 10px;
 	font-size:70px;
 	color:#E7E24C;
 	text-align: center;
 	margin-bottom: 10px;
 }
 
+#ty{
+	text-align: center;
+}
 /*three columns*/
 .column{
 	background-color: #E6E6E6;
 	float: left;
-	width: 28.5%;
+	width: 31.33%;
 	padding:15px;
+	margin: 10px;
 }
 
 .row{
@@ -254,8 +264,59 @@ textarea{
 	resize:none;
 }
 
+/* Create a Post Page */
+#createpost{
+	margin: auto 5% auto 5%;
+	padding: 15px;
+	background-color: #E6E6E6;
+}
+
+/* User/Profile Page */
+#yourlistings{	/* Left half of content */
+	background-color: white;
+	min-height: 610px;
+	margin-left: 2%;
+	margin-bottom: 5px;
+	width: 44%;
+	float: left;
+}
+
+#wishlist{	/* Right half of content */
+	background-color: white;
+	padding: auto 5px 5px 55px;
+	min-height: 610px;
+	margin-right: 5%;
+	width: 44%;
+	float: right;
+}
+
+.wishlistt{	/* Your Listing + Wishlist Headers */
+	padding: 15px;
+	background-color: #E6E6E6;
+	margin-bottom: 20px;
+}
+
+.wishlistcolumn{ /* Post */
+	background-color: #E6E6E6;
+	float: left;
+	width: 70%;
+	padding: 5px;
+	margin: auto 15% 20px 15%;
+
+}
+
+.wishlistrow{ /* Add bottom margin to each post */
+	margin-bottom: 10px;
+}
+
+
 /* Footer */
 footer{
+	position: relative;
+	margin-top: 50px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 	min-height: 80px;
 	background-color: #0059B3;
 	padding-left: 5%;
