@@ -47,7 +47,6 @@ function showSlides() {
     dots[slideIndex-1].className += " active";
     setTimeout(showSlides, 5000); // Change image every 3 seconds
 }
-
 //createpost
 function onSelection() {
     if (document.getElementById("category").value === "donating") {
@@ -60,16 +59,7 @@ function onSelection() {
 }
 
 
-const img = document.querySelector('img');
-  img.style.cursor = 'pointer';
-  img.addEventListener(
-      "click",
-      (event) => {
-          console.log(event);
-          img.style.height = '400px';
-          img.style.width = '400px';
-      });
-}
+
 
 // Run javascript after the DOM loads.
 window.addEventListener("load", onLoad);
