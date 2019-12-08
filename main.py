@@ -109,7 +109,7 @@ class CreatePostHandler(webapp2.RequestHandler):
         post_desc = self.request.get('description')
 
         # new_name = NewPost(name=poster_name, item = post_item, paragraph = post_desc, image= file_upload.file.read())
-        new_name = NewPost(category=post_cat, subcategory = post_scat, paragraph = post_desc,
+        new_name = NewPost(category=post_cat, subcategory = post_scat, description = post_desc,
                             price = post_price, communication = post_comm,image= db.Blob(str(post_pics)))
 
         new_name.put()
