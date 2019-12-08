@@ -30,9 +30,32 @@
 		<h1 id="header">Freelance</h1>
 	</header>
 
-
-
   <div class="row">
+
+    {% for i in range(num_of_items) %}
+        <div class="column">
+          <h3 class="centerHeading">{{items[i].title}}</h3>
+          <table id="Engineering">
+            <tr>
+              <td><img src='imageit?index={{ i }}' alt='no image' style="width:200px;height:300px"></td>
+            </tr>
+          </table>
+
+          <h4 style="background: #E6E6E6">{{items[i].subcat}}</h4>
+          <h4 style="background: #E6E6E6">Description:</h4>
+          <p style="font-size:13px;background: #E6E6E6">
+            {{items[i].description}}
+            <br>
+            <br><strong style="font-size: 15px;background: #E6E6E6">Price:
+            </strong> {{items[i].price}}
+          </p>
+          <h4 style="background: #E6E6E6">Form of Communication:</h4>
+          <p style="font-size: 13px;background: #E6E6E6">
+            {{items[i].communication}}
+          </p>
+        </div>
+    {% endfor %}
+
 		<div class="column">
 			<h3 class="centerHeading">Introduction to Engineering</h3>
 			<table id="Engineering">
@@ -94,13 +117,15 @@
 		</div>
 	</div>
 
+  <footer>
+    <ul>
+      <li><a href="/about_us"> About Us</a></li>
+      <li><a href="/contact_us">Contact Us</a></li>
+    </ul>
+    <p>JSTR Incorporated Corporation LLC</p>
+  </footer>
 </body>
 
-<footer>
-  <ul>
-    <li><a href="/about_us"> About Us</a></li>
-    <li><a href="/contact_us">Contact Us</a></li>
-  </ul>
-  <p>JSTR Incorporated Corporation LLC</p>
-</footer>
+<!--fix plox-->
+
 </html>

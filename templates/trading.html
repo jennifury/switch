@@ -25,10 +25,35 @@
 		</ul>
 
 	</nav>
+  <div id="wrapper">
 	<!-- Heading Indicating which page they are on-->
 	<header>
 		<h1 id="header">Trading</h1>
 	</header>
+
+  {% for i in range(num_of_items) %}
+      <div class="column">
+        <h3 class="centerHeading">{{items[i].title}}</h3>
+        <table id="Engineering">
+          <tr>
+            <td><img src='imageit?index={{ i }}' alt='no image' style="width:200px;height:300px"></td>
+          </tr>
+        </table>
+
+        <h4 style="background: #E6E6E6">{{items[i].subcat}}</h4>
+        <h4 style="background: #E6E6E6">Description:</h4>
+        <p style="font-size:13px;background: #E6E6E6">
+          {{items[i].description}}
+          <br>
+          <br><strong style="font-size: 15px;background: #E6E6E6">Price:
+          </strong> {{items[i].price}}
+        </p>
+        <h4 style="background: #E6E6E6">Form of Communication:</h4>
+        <p style="font-size: 13px;background: #E6E6E6">
+          {{items[i].communication}}
+        </p>
+      </div>
+  {% endfor %}
 
   <div class="row">
 		<div class="column">
@@ -91,11 +116,7 @@
 			</p>
 		</div>
 	</div>
-
-
-
-
-</body>
+</div>
 
 <footer>
   <ul>
@@ -104,4 +125,9 @@
   </ul>
   <p>JSTR Incorporated Corporation LLC</p>
 </footer>
+
+
+</body>
+
+
 </html>
