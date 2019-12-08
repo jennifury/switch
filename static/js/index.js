@@ -1,5 +1,24 @@
 
 
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCW8bQcGMCrSUAVg4BEgx3eS02whdDLybo",
+    authDomain: "sjsu-switch-19a46.firebaseapp.com",
+    databaseURL: "https://sjsu-switch-19a46.firebaseio.com",
+    projectId: "sjsu-switch-19a46",
+    storageBucket: "sjsu-switch-19a46.appspot.com",
+    messagingSenderId: "539251544145",
+    appId: "1:539251544145:web:9172f60f5765cb399a6870",
+    measurementId: "G-WF5MTNZMB1"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+
+
+
+
 var slideIndex = 0;
 showSlides();
 var slides,dots;
