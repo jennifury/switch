@@ -39,7 +39,7 @@ class SellingHandler(webapp2.RequestHandler):
 class DonateHandler(webapp2.RequestHandler):
     def get(self):
 
-        posts = NewPost.query().filter(NewPost.cat == 'Donating').fetch()
+        posts = NewPost.query().filter(NewPost.category == 'Donating').fetch()
         list_dict = {
         "num_of_items": len(posts),
         "items": posts
@@ -94,9 +94,9 @@ class NewPost(ndb.Model):
 
 class NewPost(ndb.Model):
     image = ndb.BlobProperty()
-    cat = ndb.StringProperty(required=True)
-    subcat =ndb.StringProperty(required=True)
-    comm = ndb.StringProperty(required=True)
+    category = ndb.StringProperty(required=True)
+    subcategory =ndb.StringProperty(required=True)
+    communication = ndb.StringProperty(required=True)
     title = ndb.StringProperty(required=True)
     price = ndb.StringProperty(required=True)
     paragraph = ndb.StringProperty(required=True)
@@ -117,11 +117,11 @@ class CreatePostHandler(webapp2.RequestHandler):
         post_desc = self.request.get('description')
 
         # new_name = NewPost(name=poster_name, item = post_item, paragraph = post_desc, image= file_upload.file.read())
-        new_name = NewPost(category=poster_cat, subcategory = post_scat, paragraph = post_desc,
+        new_name = NewPost(category=post_cat, subcategory = post_scat, paragraph = post_desc,title= post_title,
                             price = post_price, communication = post_comm,image= db.Blob(str(post_pics)))
 
         new_name.put()
-        self.redirect('/thank_you')
+        #self.redirect('/thank_you')
 
 class ImageHandler(webapp2.RequestHandler):
     def get(self):

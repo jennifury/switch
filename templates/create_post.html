@@ -1,11 +1,13 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<title>Create a Post</title>
-<link href=/static/css/index.css rel="stylesheet"/>
-<link rel="shortcut icon" href=/static/img/switchfavicon.png type="image/x-icon">
-<link rel="icon" href=/static/img/switchfavicon.png type="image/x-icon">
+  <meta charset="utf-8">
+  <title>Create a Post</title>
+  <link href="/static/css/index.css" type="text/css" rel="stylesheet" />
+  <link rel="shortcut icon" href="/static/img/switchfavicon.png" type="image/x-icon">
+  <link rel="icon" href="/static/img/switchfavicon.png" type="image/x-icon">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
 </head>
 
 <script type="text/javascript">
@@ -21,98 +23,87 @@
 </script>
 
 <body>
-
   <nav>
-<a href="/" class="logo"><img class="logo" src="/static/img/SJSUSwitch.png" alt="SJSU Switch" height="116px"></a>
-		<ul>
-			<li><a href="/donate" >Donate</a></li>
-			<li><a href="/freelance" >Freelance</a></li>
-			<li><a href="/selling" >Sell</a></li>
-			<li><a href="/trade" >Trade</a></li>
-			<li><a href="/wishlist">Profile</a></li>
-      <li><a href="/create_post" >+</a></li>
-		</ul>
+    <a href="/"> <img class="logo" src=/static/img/SJSUSwitch.png alt="SJSU Switch" height="120px"></a>
 
-	</nav>
+    <ul>
+      <li><a href="donate.html" target="_blank">Donate</a></li>
+      <li><a href="freelance.html" target="_blank">Freelance</a></li>
+      <li><a href="selling.html" target="_blank">Sell</a></li>
+      <li><a href="trading.html" target="_blank">Trade</a></li>
+      <li><a href="wishlist.html" target="_blank">Profile</a></li>
+    </ul>
+  </nav>
 
-<main>
-	<header>
-		<h1 id="header">Create Post</h1>
-	</header>
+  <main>
+    <header>
+      <h1 id="header">Create Post</h1>
+    </header>
 
-	<div id="createpost">
-		<form name="post" action = "/create_post"  enctype="multipart/form-data"  method="post">
-			<ul>
-				<li class="question"><label for="category">Category</label></li>
-				<li class="input">
-					<select name="cat" id="category" onChange="onSelection()" style="width:35%" required>
-						<option disabled selected value> -- select a category -- </option>
-					  <option value="Selling">Selling</option>
-					  <option value="Trading">Trading</option>
-						<option value="Donating">Donating</option>
-						<option value="Freelance">Freelance</option>
-					</select>
-				</li>
+    <div id="createpost">
+      <form id="post" name="post">
+        <ul>
+          <li class="question"><label for="category">Category</label></li>
+          <li class="input">
+            <select name="category" id="category" onChange="onSelection()" style="width:35%" required>
+              <option disabled selected value> -- select a category -- </option>
+              <option value="selling">Selling</option>
+              <option value="trading">Trading</option>
+              <option value="donating">Donating</option>
+              <option value="freelance">Freelance</option>
+            </select>
+          </li>
 
-				<li class="question"><label for="subcategory">Seeking or Looking</label>
-				<li class="input">
-					<select name="subcat"  style="width:35%" required>
-						<option disabled selected value> -- select a subcategory -- </option>
-					  <option value="Seeking">Seeking</option>
-					  <option value="Looking">Looking</option>
-					</select>
-				</li>
+          <li class="question"><label for="subcategory">Seeking or Looking</label>
+          <li class="input">
+            <select name="subcategory" id="subcategory" style="width:35%" required>
+              <option disabled selected value> -- select a subcategory -- </option>
+              <option value="seeking">Seeking</option>
+              <option value="looking">Looking</option>
+            </select>
+          </li>
 
-				<li class="question"><label for="title">Title</label>
-				<li class="input"><input type="text" name="name"  style="width:35%" required/></li>
+          <li class="question"><label for="title">Title</label>
+          <li class="input"><input type="text" name="title" id="title" style="width:35%" required /></li>
 
-				<li class="question"><label for="price">Price</label></li>
-				<li class="input"><input type="text" name="pricetag" style="width:35%" required/></li>
+          <li class="question"><label for="price">Price</label></li>
+          <li class="input"><input type="text" name="price" id="price" style="width:35%" required /></li>
 
-				<li class="question"><label for="description">Description</label></li>
-				<li class="input"><textarea name="desc"  rows="6" cols="90" style="width:70%" required></textarea></li>
+          <li class="question"><label for="description">Description</label></li>
+          <li class="input"><textarea name="description" id="description" rows="6" cols="90" style="width:70%" required></textarea></li>
 
-				<li class="question"><label for="communication">Form of Communication</label></li>
-				<li class="input"><input name="commun" style="width:35%" required></textarea></li>
+          <li class="question"><label for="communication">Form of Communication</label></li>
+          <li class="input"><input name="communication" id="communication" style="width:35%" required></textarea></li>
 
-        <li class="question"><label for="pics">Upload an image</label></li>
-        <li class="input"><input type="file"  id="pics" name="pics" accept="image/*" required="required" multiple></li>
+          <li class="input"><input class="submit" type="submit" value="Submit"></li>
+        </ul>
+      </form>
+      <table>
+        <tr>
+            <td>Category</td>
+            <td>Subcategory</td>
+            <td>Title</td>
+            <td>Price</td>
+            <td>Description</td>
+            <td>Communication</td>
+        </tr>
+        <tbody id="posts_table">
+        </tbody>
+    </table>
+    </div>
+  </main>
 
-				<li class="input"><input class="submit" type="submit" value="Submit"></li>
+  <footer>
+    <ul>
+      <li><a href="about_us.html" target="_blank">About Us</a></li>
+      <li><a href="contact_us.html" target="_blank">Contact Us</a></li>
+    </ul>
+    <p>JSTR Incorporated Corporation LLC</p>
+  </footer>
 
-      </ul>
-		</form>
-	</div>
-</main>
-
-<table>
-      <tr>
-          <td>Category</td>
-          <td>Subcategory</td>
-          <td>Title</td>
-          <td>Price</td>
-          <td>Description</td>
-          <td>Communication</td>
-      </tr>
-      <tbody id="posts_table">
-      </tbody>
-  </table>
-
-
-!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-analytics.js"></script>
-<script src="/static/js/index.js"></script>
-<footer>
-  <ul>
-    <li><a href="/about_us"> About Us</a></li>
-    <li><a href="/contact_us">Contact Us</a></li>
-  </ul>
-  <p>JSTR Incorporated Corporation LLC</p>
-</footer>
-
+  <script src="https://www.gstatic.com/firebasejs/7.5.1/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.5.1/firebase-analytics.js"></script>
+  <script src="../static/js/index.js"></script>
 </body>
+
 </html>
