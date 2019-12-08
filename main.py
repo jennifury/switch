@@ -151,7 +151,7 @@ class ImageHandler(webapp2.RequestHandler):
         post_desc = self.request.get('desc')
 
         # new_name = NewPost(name=poster_name, item = post_item, paragraph = post_desc, image= file_upload.file.read())
-        new_name = NewPost(cat=poster_cat, subcat = post_subcat, paragraph = post_desc, image= db.Blob(str(post_pics)), title = post_title, comm = post_com, price = post_price)
+        new_name = NewPost(cat=post_cat, subcat = post_subcat, paragraph = post_desc, image= db.Blob(str(post_pics)), title = post_title, comm = post_com, price = post_price)
 
         new_name.put()
         self.redirect("/thankyou")

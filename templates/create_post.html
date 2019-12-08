@@ -8,6 +8,17 @@
 <link rel="icon" href=/static/img/switchfavicon.png type="image/x-icon">
 </head>
 
+<script type="text/javascript">
+  function onSelection() {
+    if (document.getElementById("category").value === "donating") {
+      document.getElementById("price").setAttribute("disabled", true);
+      document.getElementsByName('price')[0].value = 'FREE';
+    } else {
+      document.getElementById('price').removeAttribute('disabled');
+      document.getElementsByName('price')[0].value = '';
+    }
+  }
+</script>
 
 <body>
 
@@ -73,6 +84,19 @@
 		</form>
 	</div>
 </main>
+
+<table>
+      <tr>
+          <td>Category</td>
+          <td>Subcategory</td>
+          <td>Title</td>
+          <td>Price</td>
+          <td>Description</td>
+          <td>Communication</td>
+      </tr>
+      <tbody id="posts_table">
+      </tbody>
+  </table>
 
 
 !-- The core Firebase JS SDK is always required and must be listed first -->

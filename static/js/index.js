@@ -1,5 +1,3 @@
-
-
   // Your web app's Firebase configuration
   var firebaseConfig = {
     apiKey: "AIzaSyCW8bQcGMCrSUAVg4BEgx3eS02whdDLybo",
@@ -14,6 +12,52 @@
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
+
+  // ADD TO DATABASE
+  var postsRef = firebase.database().ref('posts');
+  document.getElementById('post').addEventListener('submit', submitForm);
+  function submitForm(e){
+    e.preventDefault();
+    var category = getInputVal('category');
+    var subcategory = getInputVal('subcategory');
+    var title = getInputVal('title');
+    var price = getInputVal('price');
+    var description = getInputVal('description');
+    var communication = getInputVal('communication');
+    savePost(category, subcategory, title, price, description, communication);
+    document.getElementById('post').reset();
+  }
+  function getInputVal(id){
+    return document.getElementById(id).value;
+  }
+  function savePost(category, subcategory, title, price, description, communication) {
+    var newPostRef = postsRef.push();
+    newPostRef.set({
+      category:category,
+      subcategory:subcategory,
+      title:title,
+      price:price,
+      description:description,
+      communication:communication
+    });
+  }
+
+  // RETRIEVE FROM DATABASE
+  var rootRef = firebase.database().ref().child("posts");
+  rootRef.on("child_added", snap => {
+    var category = snap.child("category").val();
+    var subcategory = snap.child("subcategory").val();
+    var title = snap.child("title").val();
+    var price = snap.child("price").val();
+    var description = snap.child("description").val();
+    var communication = snap.child("communication").val();
+    $('#posts_table').append('<tr><td>' + category +'</td>' +
+                             '<td>' + subcategory +'</td>' +
+                             '<td>' + title +'</td><' +
+                             '<td>' + price +'</td>' +
+                             '<td>' + description +'</td>' +
+                             '<td>' + communication +'</td></tr>');
+  });
 
 
 
@@ -70,16 +114,6 @@ function showSlides() {
 }
 
 
-//createpost
-function onSelection() {
-    if (document.getElementById("category").value === "donating") {
-        document.getElementById("price").setAttribute("disabled", true);
-        document.getElementsByName('price')[0].value='FREE';
-    } else {
-        document.getElementById('price').removeAttribute('disabled');
-        document.getElementsByName('price')[0].value='';
-    }
-}
 
 
 const img = document.querySelector('img');
