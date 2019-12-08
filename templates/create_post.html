@@ -4,27 +4,16 @@
 <head>
   <meta charset="utf-8">
   <title>Create a Post</title>
-  <link href="/static/css/index.css" type="text/css" rel="stylesheet" />
-  <link rel="shortcut icon" href="/static/img/switchfavicon.png" type="image/x-icon">
-  <link rel="icon" href="/static/img/switchfavicon.png" type="image/x-icon">
+  <link href="../static/css/index.css" type="text/css" rel="stylesheet" />
+  <link rel="shortcut icon" href="../static/img/switchfavicon.png" type="image/x-icon">
+  <link rel="icon" href="../static/img/switchfavicon.png" type="image/x-icon">
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
 </head>
 
-<script type="text/javascript">
-  function onSelection() {
-    if (document.getElementById("category").value === "donating") {
-      document.getElementById("price").setAttribute("disabled", true);
-      document.getElementsByName('price')[0].value = 'FREE';
-    } else {
-      document.getElementById('price').removeAttribute('disabled');
-      document.getElementsByName('price')[0].value = '';
-    }
-  }
-</script>
-
 <body>
+
   <nav>
-    <a href="/"> <img class="logo" src=/static/img/SJSUSwitch.png alt="SJSU Switch" height="120px"></a>
+    <img class="logo" src="../static/img/SJSUSwitch.png" alt="SJSU Switch" height="120px">
 
     <ul>
       <li><a href="donate.html" target="_blank">Donate</a></li>
@@ -35,7 +24,7 @@
     </ul>
   </nav>
 
-  <main>
+  <div id="wrapper">
     <header>
       <h1 id="header">Create Post</h1>
     </header>
@@ -54,12 +43,12 @@
             </select>
           </li>
 
-          <li class="question"><label for="subcategory">Seeking or Looking</label>
+          <li class="question"><label for="subcategory">Are you looking for this item?</label>
           <li class="input">
             <select name="subcategory" id="subcategory" style="width:35%" required>
               <option disabled selected value> -- select a subcategory -- </option>
-              <option value="seeking">Seeking</option>
-              <option value="looking">Looking</option>
+              <option value="seeking">Yes</option>
+              <option value="looking">No</option>
             </select>
           </li>
 
@@ -75,23 +64,23 @@
           <li class="question"><label for="communication">Form of Communication</label></li>
           <li class="input"><input name="communication" id="communication" style="width:35%" required></textarea></li>
 
+          <!--<li class="question"><label for="pics">Upload an image</label></li>
+          <li class="input"><input type="file"  id="pics" name="pics" accept="image/*" required="required" multiple></li>-->
+
           <li class="input"><input class="submit" type="submit" value="Submit"></li>
+
         </ul>
       </form>
-      <table>
-        <tr>
-            <td>Category</td>
-            <td>Subcategory</td>
-            <td>Title</td>
-            <td>Price</td>
-            <td>Description</td>
-            <td>Communication</td>
-        </tr>
-        <tbody id="posts_table">
-        </tbody>
-    </table>
     </div>
-  </main>
+
+    <header>
+      <h1 id="header">Selling</h1>
+    </header>
+
+    <div id="selling_posts">
+    </div>
+
+  </div>
 
   <footer>
     <ul>
@@ -103,7 +92,7 @@
 
   <script src="https://www.gstatic.com/firebasejs/7.5.1/firebase.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.5.1/firebase-analytics.js"></script>
-  <script src="../static/js/index.js"></script>
+  <script src="../static/js/main.js"></script>
 </body>
 
 </html>
